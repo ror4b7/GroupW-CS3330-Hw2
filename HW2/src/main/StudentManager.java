@@ -10,13 +10,15 @@ public class StudentManager
     private int index; 
     private int cap; 
 
+
    StudentManager()
    {
-        cap = 100; 
-        manageStudents = new Student[cap];
-        index = 0; 
+        cap = 100; //Intializes the max amount of Students the manager can hold 
+        manageStudents = new Student[cap]; //Creates the array that holds the student objects
+        index = 0; //Sets the index where a new student object would be inserted 
    }
 
+   
    public void printStudent()
    {
     for (int i = 0; i < index; i++)
@@ -26,9 +28,10 @@ public class StudentManager
    }
 
 
+   //Adds student 
     public boolean addStudent(Student add)
     {
-        if (index >= cap)
+        if (index >= cap) //Checks to make
         {
             return false; 
         }
@@ -36,6 +39,9 @@ public class StudentManager
         index += 1; 
         return true; 
     }
+
+
+    
 
     public boolean readFromFile(String filename)
     {
