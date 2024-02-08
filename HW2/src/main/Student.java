@@ -14,6 +14,24 @@ public class Student {
         this.grade = grade; 
     }
 
+    Student(String row)
+    {
+        String line[] = row.split("\\s+"); 
+
+        id = Integer.parseInt(line[0]);
+        grade  = Double.parseDouble(line[line.length - 1]); 
+        name = "";
+        for (int i =0; i < line.length; i++)
+        {
+            if (line[i].equals(Integer.toString(id)) == false && line[i].equals(Double.toString(grade)) == false)
+            {
+                name += line[i]; 
+                name += " ";
+            }
+        }
+
+    }
+
     @Override
     public String toString() 
     {
@@ -43,6 +61,8 @@ public class Student {
     public void setGrade(double grade) {
         this.grade = grade;
     }
+
+    
 
     
 
