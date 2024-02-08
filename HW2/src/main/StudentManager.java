@@ -61,9 +61,11 @@ public class StudentManager
     public static void main(String args[])
     {
         StudentManager manager = new StudentManager(); 
-        manager.readFromFile("studentData.txt"); 
-        manager.printStudent();
 
+        manager.readFromFile("studentData.txt");
+
+        manager.printStudent();
+    	
     }
 
 }
