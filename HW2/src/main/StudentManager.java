@@ -19,13 +19,13 @@ public class StudentManager
    }
 
    
-   public void printStudent()
-   {
-    for (int i = 0; i < index; i++)
-    {
-        System.out.println(manageStudents[i]);
-    }
-   }
+//    public void printStudent()
+//    {
+//     for (int i = 0; i < index; i++)
+//     {
+//         System.out.println(manageStudents[i]);
+//     }
+//    }
 
 
    //Adds student 
@@ -63,6 +63,21 @@ public class StudentManager
         }
     } 
     
+// List student info for all known students in the array
+
+    public void displayStudents() {
+        //Checking if there are any students listed
+        if(manageStudents[0]==null) {
+            System.out.println("There are no students currently listed.");
+        }
+
+        else { //using the toString method to cycle through the student array
+            for(int i=0;i<index;i++) {
+                System.out.println(manageStudents[i].toString());
+            }
+        }
+    }
+
 // Search for student by ID
     
     public boolean searchStudentById(int id) {
