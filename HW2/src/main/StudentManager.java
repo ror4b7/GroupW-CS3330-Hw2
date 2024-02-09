@@ -115,6 +115,8 @@ public class StudentManager
                 	//Print post-update information
                 	System.out.print("Student information after grade update: ");
                     System.out.println(this.manageStudents[i].toString());
+                    
+                    return true;
                 	
                 }
             }
@@ -122,8 +124,9 @@ public class StudentManager
     	}
     	
     	//Return false and print message if ID cannot be found 
-    	System.out.println("Student ID not found");
-    	return false;
+        System.out.println("Student ID not found");
+        return false;
+
     	
     }
 

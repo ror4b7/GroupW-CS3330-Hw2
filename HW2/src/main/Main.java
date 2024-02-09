@@ -17,8 +17,10 @@ public static void main(String args[])
       //Rachel's testing
       System.out.println("\nTesting the updateStudentGradebyID method:");
       //Testing with a valid ID
+      System.out.println("\nTesting with a valid ID:");
       manager.updateStudentGradebyID(105, 98.2);
       //Testing with an invalid ID
+      System.out.println("\nTesting with an invalid ID:");
       manager.updateStudentGradebyID(999, 85.0);
       
       
