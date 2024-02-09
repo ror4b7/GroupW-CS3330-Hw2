@@ -65,20 +65,32 @@ public class StudentManager
     
 // Search for student by ID
     
-public boolean searchStudentById(int id) {
-	
-	if(index <= 0 || id <= 0) {
-		return false;
-	}
-	for(int i = 0; i < index; ++i) {
-		if(this.manageStudents[i].equals(id)) {
-			System.out.println(this.manageStudents[i].toString());
-			return true;
-		}
-	}
-	System.out.println("Student ID not found");
-	return false;
-}
+    public boolean searchStudentById(int id) {
+        // Return false immediately if 'index' or 'id' is not positive.
+        if(id <= 0) {
+        	System.out.print("Invalid ID");
+        	return false;
+        }
+        if(index == 0) {
+        	System.out.println("No students in array");
+            return false;
+        }
+
+        // Loop through the 'manageStudents' array up to 'index'.
+        for(int i = 0; i < index; ++i) {
+            // Check if the current student's ID matches the search ID.
+            if(this.manageStudents[i].equals(id)) {
+                // Print the matching student's details and return true.
+                System.out.println(this.manageStudents[i].toString());
+                return true;
+            }
+        }
+
+        // If no match is found, indicate that and return false.
+        System.out.println("Student ID not found");
+        return false;
+    }
+
 
 
 //    public static void main(String args[])

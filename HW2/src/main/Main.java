@@ -10,19 +10,10 @@ public static void main(String args[])
 
       manager.printStudent();
       
-      manager.searchStudentById(101);
-      
       System.out.println("\n");
+      System.out.println("Testing the searchStudentByID method:");
+      manager.searchStudentById(105);
       
-      Student Student1 = new Student(123, "John", 90);
-      Student Student2 = new Student(123, "John", 90);
-      
-      if(Student1.equals(Student2)) {
-    	  System.out.println("Student1 and Student2 are equal!");
-      }
-      else {
-    	  System.out.println("Not equal");
-      }
   }
 
 }
