@@ -1,5 +1,7 @@
 package main;
 
+// import java.util.Objects;
+
 public class Student {
 
     private int id; 
@@ -30,14 +32,19 @@ public class Student {
         }
 
     }
-
+    
+    
     @Override
     public String toString() 
     {
         return "Name: " + name + " ID: " + id + " Grade: " + grade; 
     }
+    
+    public boolean equals(int id) {
+		return this.id == id;
+	}
 
-    public int getId() {
+	public int getId() {
         return this.id;
     }
 
@@ -45,7 +52,7 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
+	public String getName() {
         return this.name;
     }
 
