@@ -90,6 +90,42 @@ public class StudentManager
         System.out.println("Student ID not found");
         return false;
     }
+    
+    public boolean updateStudentGradebyID(int id, double grade)
+    {
+    	
+    	//Ensure that the given ID exists
+    	if(searchStudentById(id) == true)
+    	{
+    		
+    		//Loop through the student array to find the index of the given ID
+            for(int i = 0; i < index; i++) 
+            {
+                //Check if the parameter id matches the index id
+                if(this.manageStudents[i].equals(id)) 
+                {
+                	
+                	//Print pre-update information
+                	System.out.print("Student information before grade update: ");
+                    System.out.println(this.manageStudents[i].toString());
+                    
+                	//Update student grade with the provided double
+                	this.manageStudents[i].setGrade(grade);
+               
+                	//Print post-update information
+                	System.out.print("Student information after grade update: ");
+                    System.out.println(this.manageStudents[i].toString());
+                	
+                }
+            }
+    	
+    	}
+    	
+    	//Return false and print message if ID cannot be found 
+    	System.out.println("Student ID not found");
+    	return false;
+    	
+    }
 
 
 
