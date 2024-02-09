@@ -62,6 +62,23 @@ public class StudentManager
             return false;
         }
     } 
+    
+// Search for student by ID
+    
+public boolean searchStudentById(int id) {
+	
+	if(index <= 0 || id <= 0) {
+		return false;
+	}
+	for(int i = 0; i < index; ++i) {
+		if(this.manageStudents[i].equals(id)) {
+			System.out.println(this.manageStudents[i].toString());
+			return true;
+		}
+	}
+	System.out.println("Student ID not found");
+	return false;
+}
 
 
 //    public static void main(String args[])
